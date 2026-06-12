@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Sistema Hotel - Reservas</h1>
+
+    <button onclick="window.location.href='index.html'">
+        Voltar
+    </button>
+</header>
+
+<div class="container">
+
+    <aside>
+        <h2>Menu</h2>
+
+        <button onclick="window.location.href='index.html'">
+            Quartos
+        </button>
+
+        <button onclick="carregarReservas()">
+            Reservas
+        </button>
+    </aside>
+
+    <main id="listaReservasPage">
+       
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+
+function carregarReservas() {
+
+    fetch("http://localhost:3000/reservas/listar")
+        .then(res => res.json())
+        .then(data => {
+
+            const container = document.getElementById("listaReservasPage");
+
+            container.innerHTML = "";
+
+            data.forEach(reserva => {
+
+                const card = document.createElement("div");
+                card.classList.add("card");
+
+                card.innerHTML = `
+                    <h3>Reserva #${reserva.id}</h3>
+
+                    <p><b>Hóspede:</b> ${reserva.hospede}</p>
+
+                    <p><b>Entrada:</b>
+                        ${new Date(reserva.dataEntrada).toLocaleDateString("pt-BR")}
+                    </p>
+
+                    <p><b>Saída:</b>
+                        ${new Date(reserva.dataSaida).toLocaleDateString("pt-BR")}
+                    </p>
+
+                    <p><b>Quarto:</b> ${reserva.quartoId}</p>
+
+                    <button class="btnExcluir"
+                        onclick="excluirReservaPage(${reserva.id})">
+                        Excluir
+                    </button>
+                `;
+
+                container.appendChild(card);
+            });
+
+        })
+        .catch(() => alert("Erro ao carregar reservas"));
+}
+
+
+function excluirReservaPage(id) {
+
+    if (!confirm("Deseja excluir esta reserva?")) return;
+
+    fetch("http://localhost:3000/reservas/excluir/" + id, {
+        method: "DELETE"
+    })
+    .then(res => {
+
+        if (!res.ok) throw new Error();
+
+        alert("Reserva excluída!");
+        carregarReservas();
+
+    })
+    .catch(() => alert("Erro ao excluir reserva"));
+}
+
+carregarReservas();
+</script>
+
+</body>
+</html>

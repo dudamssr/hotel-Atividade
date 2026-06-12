@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* ROSA CLARO CROMÁTICO */
+    --rosaMuitoClaro: #fff1f6;
+    --rosaClaro: #ffe4ef;
+    --rosaSuave: #fbcfe8;
+    --rosa: #f472b6;
+    --rosaMedio: #ec4899;
+    --rosaEscuro: #be185d;
+
+    /* NEUTROS */
+    --branco: #ffffff;
+    --cinza: #555;
+    --vermelho: #ef4444;
+    --sombra: rgba(236, 72, 153, 0.15);
+    --fundoModal: rgba(0, 0, 0, 0.45);
+}
+
+body {
+    background-color: var(--rosaMuitoClaro);
+    width: 100vw;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--rosaEscuro);
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 78px);
+}
+
+aside {
+    width: 220px;
+    background-color: var(--rosaMedio);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+aside h2 {
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+aside button {
+    width: 100%;
+    background-color: var(--rosa);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: var(--rosaEscuro);
+    color: var(--branco);
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btnReservas {
+    background-color: var(--rosaMedio);
+    flex: 1;
+}
+
+.btnExcluir {
+    background-color: var(--vermelho);
+    flex: 1;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #fbcfe8;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.card {
+    width: 300px;
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card h3 {
+    color: var(--rosaEscuro);
+}
+
+.card p {
+    color: var(--cinza);
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--fundoModal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.janela {
+    background-color: var(--branco);
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+.janelaGrande {
+    width: 900px;
+}
+
+.oculto {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: var(--rosaEscuro);
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #f3e8f0;
+    text-align: center;
+}
+
+table tr:hover {
+    background-color: #ffe4ef;
+}
+
+#infoQuarto {
+    margin-bottom: 15px;
+    color: var(--cinza);
+    font-weight: bold;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.formButtons button {
+    flex: 1;
+}
