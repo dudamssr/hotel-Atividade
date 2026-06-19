@@ -112,27 +112,6 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 * GET `/reservas/buscar/:id`
 * PUT `/reservas/atualizar/:id`
 * DELETE `/reservas/excluir/:id`
-
----
-
-## *Prints das Telas*
-
-### *Tela Principal*
-
-*Inserir print da tela principal.*
-
-### *Cadastro de Quarto*
-
-*Inserir print da tela de cadastro de quarto.*
-
-### *Tela de Reservas*
-
-*Inserir print da tela de reservas.*
-
-### *Tela Sobre*
-
-*Inserir print da tela sobre.*
-
 ---
 
 ## *Como Executar o Projeto*
