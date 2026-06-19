@@ -1,6 +1,6 @@
 # Hotel
 
-## *Descrição do Projeto*
+## Descrição do Projeto
 
 Este projeto consiste em um sistema de gerenciamento de hotel desenvolvido para realizar o controle de quartos e reservas.
 
@@ -10,7 +10,7 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 
 ---
 
-## *Tecnologias Utilizadas*
+## Tecnologias Utilizadas
 
 * HTML
 * CSS
@@ -23,7 +23,7 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 
 ---
 
-## *Infraestrutura Utilizada*
+## Infraestrutura Utilizada
 
 * IDE: Visual Studio Code
 * SGBD: MySQL
@@ -31,23 +31,23 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 
 ---
 
-## *Funcionalidades*
+## Funcionalidades
 
-### *Quartos*
+### Quartos
 
 * Cadastro de quartos
 * Listagem de quartos
 * Exclusão de quartos
 * Visualização de reservas do quarto
 
-### *Reservas*
+### Reservas
 
 * Cadastro de reservas
 * Listagem de reservas
 * Exclusão de reservas
 * Associação automática ao quarto selecionado
 
-### *Sistema*
+### Sistema
 
 * Integração entre Front-end e Back-end
 * Persistência de dados em banco MySQL
@@ -56,17 +56,17 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 
 ---
 
-## *Estrutura do Sistema*
+## Estrutura do Sistema
 
-### *Menu Lateral*
+### Menu Lateral
 
 * Quartos
 * Reservas
 * Sobre
 
-### *Telas*
+### Telas
 
-#### *Tela Principal*
+#### Tela Principal
 
 * Nome do sistema
 * Listagem dos quartos cadastrados
@@ -74,20 +74,20 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 * Botão para visualizar reservas
 * Botão para excluir quarto
 
-#### *Tela de Cadastro de Quarto*
+#### Tela de Cadastro de Quarto
 
 * Número do quarto
 * Tipo do quarto
 * Botão cadastrar
 
-#### *Tela de Reservas*
+#### Tela de Reservas
 
 * Dados do quarto selecionado
 * Cadastro de reserva
 * Listagem de reservas
 * Exclusão de reservas
 
-#### *Tela Sobre*
+#### Tela Sobre
 
 * Informações do sistema
 * Tecnologias utilizadas
@@ -95,17 +95,17 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 
 ---
 
-## *Rotas da API*
+## Rotas da API
 
-### *Quartos*
+### Quartos
 
 * POST `/quartos/cadastrar`
 * GET `/quartos/listar`
 * GET `/quartos/buscar/:id`
 * PUT `/quartos/atualizar/:id`
 * DELETE `/quartos/excluir/:id`
-
-### *Reservas*
+* 
+### Reservas
 
 * POST `/reservas/cadastrar`
 * GET `/reservas/listar`
@@ -114,39 +114,39 @@ As informações são armazenadas em banco de dados MySQL e manipuladas através
 * DELETE `/reservas/excluir/:id`
 ---
 
-## *Como Executar o Projeto*
+## Como Executar o Projeto
 
-### *. Clone o repositório*
+### Clone o repositório
 
 git clone
 
-### *. Acesse a pasta do projeto*
+### Acesse a pasta do projeto
 
 cd hotelback
 
-### *. Instale as dependências*
+### Instale as dependências
 
 npm install
 
-### *. Configure o arquivo .env*
+### Configure o arquivo .env
 
 DATABASE_URL="mysql://usuario:senha@localhost:3306/hotel_db"
 
 PORT_APP=3000
 
-### *. Execute as migrations*
+### Execute as migrations
 
 npx prisma migrate dev
 
-### *. Gere o Prisma Client*
+### Gere o Prisma Client
 
 npx prisma generate
 
-### *. Inicie o servidor*
+### Inicie o servidor
 
 nodemon server.js
 
-### *8. Execute o Front-end*
+### Execute o Front-end
 
 Entre no repositório x e clique no link do site. Ou inicie o arquivo index.html.
 
