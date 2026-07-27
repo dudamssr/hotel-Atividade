@@ -148,6 +148,6 @@ nodemon server.js
 
 ### Execute o Front-end
 
-Entre no repositório x e clique no link do site. Ou inicie o arquivo index.html.
+Entre no repositório e clique no link do site. Ou inicie o arquivo index.html.
 
 ---
